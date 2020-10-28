@@ -43,7 +43,7 @@ var dataJSON = [
   },
 
   {
-    "week" : 32,
+    "week" : 43,
     "activities" : [
       {
         "id":35,
@@ -67,7 +67,7 @@ var dataJSON = [
   },
 
   {
-    "week" : 43,
+    "week" : 44,
     "activities" :
     [
       {
@@ -151,7 +151,7 @@ function addCollapseTarget(id){
         </table>
       </div>
       <div class='text-center'>
-        <button type="button" class="btn btn-sm btn-warning text-right">Add Activity</button>
+        <button type="button" class="btn btn-sm btn-warning text-right" data-toggle="modal" data-target="#planModal" data-week="` + id + `">Add Activity</button>
       </div>
     </div>
   `;
@@ -173,7 +173,7 @@ function loadTable(){
                 <td>` + value.type + `</td>
                 <td>` + value.intTime + `</td>
                 <td>
-                  <button id="` + value.id + `" type="button" class="btn btn-sm btn-block btn-outline-info">Select</button>
+                  <button id="` + value.id + `" type="button" class="btn btn-sm btn-block btn-outline-primary">Select</button>
                 </td>
               </tr>
               `;
@@ -200,4 +200,14 @@ $("#accordionWeeks").on('shown.bs.collapse', function (event) {
 $("#accordionWeeks").on('hide.bs.collapse', function (event) {
   //console.log(event);
   $('[data-target="#' + event.target.id +'"]').removeClass('btn-primary').addClass("btn-outline-secondary");
+});
+
+$('#planModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var activiyWeek = button.data('week'); // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Plan Activity for week ' +  activiyWeek);
+  modal.find('#activity-week').val(activiyWeek);
 });

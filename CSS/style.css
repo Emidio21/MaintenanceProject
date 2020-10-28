@@ -8,11 +8,21 @@ h2{
   font-weight: 600;
 }
 
+.header{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: auto !important; 
+}
+
 .btn-primary {
   background-color: #3274D6;
 }
 .bg-primary {
   background-color: #3274D6!important;
+}
+
+.btn-outline-primary:hover{
+  background-color: #3274D6;
 }
 
 .date{

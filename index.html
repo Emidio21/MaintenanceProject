@@ -71,8 +71,56 @@
       </div>
     </section>
 
+  <section>
+
+    <div class="modal fade" id="planModal" tabindex="-2" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Plan Activity for week </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="activity-week" class="col-form-label">Week:</label>
+                <input type="text" class="form-control" id="activity-week">
+              </div>
+              <div class="form-group">
+                <label for="activity-area" class="col-form-label">Area:</label>
+                <input type="text" class="form-control" id="activity-area">
+              </div>
+              <div class="form-group">
+                <label for="activity-type" class="col-form-label">Type</label>
+                <select class="custom-select" id="typeSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">Hydraulic</option>
+                  <option value="2">Electric</option>
+                  <option value="3">Electronics</option>
+                  <option value="3">Mechanical</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="activity-intTime" class="col-form-label">Intervention Time [min]:</label>
+                <input type="number" class="form-control" id="activity-intTime" min="0" data-bind="value:replyNumber" />
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add Activity</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
         <!-- Footer -->
-    <footer class="page-footer font-small bg-primary">
+    <footer class="page-footer font-small text-light bg-dark">
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
