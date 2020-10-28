@@ -1,0 +1,90 @@
+{
+  "week":13,
+  "activities":[
+    {
+      "id":13,
+      "area":"Fisciano - Molding",
+      "type" : "Mechanical",
+      "intTime" : 120
+    },
+    {
+      "id":14,
+      "area":"Nusco - Carpentry",
+      "type" : "Electric",
+      "intTime" : 30
+    }
+  ]
+},
+
+{
+  "week" : 25,
+  "activities" : [
+    {
+      "id":20,
+      "area":"Morra - Painting",
+      "type" : "Hydraulic",
+      "intTime" : 250
+    },
+    {
+      "id":21,
+      "area":"Fisciano - Molding",
+      "type" : "Electronics",
+      "intTime" : 90
+    },
+    {
+      "id":22,
+      "area":"Morra - Molding",
+      "type" : "Electric",
+      "intTime" : 75
+    }
+  ]
+},
+
+{
+  "week" : 32,
+  "activities" : [
+    {
+      "id":35,
+      "area":"Fisciano - Painting",
+      "type" : "Hydraulic",
+      "intTime" : 125
+    },
+    {
+      "id":36,
+      "area":"Fisciano - Carpentry",
+      "type" : "Hydraulic",
+      "intTime" : 100
+    },
+    {
+      "id":37,
+      "area":"Nusco - Molding",
+      "type" : "Electric",
+      "intTime" : 20
+    }
+  ]
+},
+
+{
+  "week" : 43,
+  "activities" :
+  [
+    {
+      "id":50,
+      "area":"Fisciano - Molding",
+      "type" : "Hydraulic",
+      "intTime" : 45
+    },
+    {
+      "id":36,
+      "area":"Nusco - Carpentry",
+      "type" : "Mechanical",
+      "intTime" : 60
+    },
+    {
+      "id":37,
+      "area":"Morra - Painting",
+      "type" : "Electronics",
+      "intTime" : 200
+    }
+  ]
+}
