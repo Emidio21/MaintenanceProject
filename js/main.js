@@ -192,14 +192,14 @@ $("#collapse" + currentWeek).collapse();
 
 $("#accordionWeeks").on('shown.bs.collapse', function (event) {
   //console.log(event);
-  $('[data-target="#' + event.target.id +'"]').removeClass('btn-outline-secondary').addClass("btn-primary");
+  $('[data-target="#' + event.target.id +'"]').removeClass('btn-outline-secondary').addClass("btn-blue");
   var element = document.getElementById(event.target.id);
   element.scrollIntoView({behavior: "smooth", block: "center"});
 });
 
 $("#accordionWeeks").on('hide.bs.collapse', function (event) {
   //console.log(event);
-  $('[data-target="#' + event.target.id +'"]').removeClass('btn-primary').addClass("btn-outline-secondary");
+  $('[data-target="#' + event.target.id +'"]').removeClass('btn-blue').addClass("btn-outline-secondary");
 });
 
 $('#planModal').on('show.bs.modal', function (event) {

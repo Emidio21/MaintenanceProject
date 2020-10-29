@@ -24,8 +24,8 @@
   </head>
   <body>
     <!-- Header with logo, menu, date and week and user -->
-    <div class="container container-md header sticky-top ">
-      <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-center">
+    <div class="container container-lg header sticky-top">
+      <nav class="navbar navbar-expand-md navbar-light bg-blue justify-content-center">
         <a class="navbar-brand" href="#">
           <img src="images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
             CompanyX
@@ -76,7 +76,7 @@
     <div class="modal fade" id="planModal" tabindex="-2" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-blue text-light">
             <h5 class="modal-title" id="ModalLabel">Plan Activity for week </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -84,34 +84,42 @@
           </div>
           <div class="modal-body">
             <form>
-              <div class="form-group">
-                <label for="activity-week" class="col-form-label">Week:</label>
-                <input type="text" class="form-control" id="activity-week">
+              <div class="form-group row">
+                <label for="activity-week" class="col-form-label col-sm-4">Week:</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control " id="activity-week" min="1" max="53" data-bind="value:replyNumber" />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="activity-area" class="col-form-label">Area:</label>
-                <input type="text" class="form-control" id="activity-area">
+              <div class="form-group row">
+                <label for="activity-area" class="col-sm-4 col-form-label">Area:</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="activity-area">
+                </div>
               </div>
-              <div class="form-group">
-                <label for="activity-type" class="col-form-label">Type</label>
-                <select class="custom-select" id="typeSelect">
-                  <option selected>Choose...</option>
-                  <option value="1">Hydraulic</option>
-                  <option value="2">Electric</option>
-                  <option value="3">Electronics</option>
-                  <option value="3">Mechanical</option>
-                </select>
+              <div class="form-group row">
+                <label for="activity-type" class="col-sm-4 col-form-label">Type</label>
+                <div class="col-sm-8">
+                  <select class="custom-select" id="typeSelect">
+                    <option selected>Choose...</option>
+                    <option value="1">Hydraulic</option>
+                    <option value="2">Electric</option>
+                    <option value="3">Electronics</option>
+                    <option value="3">Mechanical</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="activity-intTime" class="col-form-label">Intervention Time [min]:</label>
-                <input type="number" class="form-control" id="activity-intTime" min="0" data-bind="value:replyNumber" />
+              <div class="form-group row">
+                <label for="activity-intTime" class="col-sm-4 col-form-label">Intervention Time [min]:</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="activity-intTime" min="0" data-bind="value:replyNumber" />
+                </div>
               </div>
             </form>
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Add Activity</button>
+            <button type="button" class="btn btn-blue text-light">Add Activity</button>
           </div>
         </div>
       </div>
@@ -120,7 +128,7 @@
   </section>
 
         <!-- Footer -->
-    <footer class="page-footer font-small text-light bg-dark">
+    <footer class="container container-lg footer font-small text-light bg-dark">
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:

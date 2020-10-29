@@ -8,21 +8,23 @@ h2{
   font-weight: 600;
 }
 
-.header{
+.header, .footer{
   padding-left: 0 !important;
   padding-right: 0 !important;
-  margin: auto !important; 
+  margin: auto !important;
+  max-width: 1240px;
 }
 
-.btn-primary {
+.btn-blue, .bg-blue {
   background-color: #3274D6;
 }
-.bg-primary {
-  background-color: #3274D6!important;
+
+.btn-blue:hover, .bg-blue:hover{
+  background-color: #2868c7;
 }
 
 .btn-outline-primary:hover{
-  background-color: #3274D6;
+  background-color: #2868c7;
 }
 
 .date{
