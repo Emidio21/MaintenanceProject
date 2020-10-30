@@ -5,7 +5,8 @@
     <title>Maintenance Planner</title>
 
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- jQuery -->
@@ -83,87 +84,91 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div class="modal-body">
-            <form>
-              <!-- Week row -->
-              <div class="form-group row">
-                <label for="activity-week" class="col-form-label col-sm-4 text-center">Week:</label>
-                <div class="col-sm-8">
-                  <input type="number" class="form-control " id="activity-week" min="1" max="53" placeholder="1 - 52" data-bind="value:replyNumber" />
-                </div>
-              </div>
-              <!-- Area row -->
-              <div class="form-group row">
-                <label for="activity-area" class="col-sm-4 col-form-label text-center">Area:</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="activity-area">
-                </div>
-              </div>
-              <!-- Type row -->
-              <div class="form-group row">
-                <label for="activity-type" class="col-sm-4 col-form-label text-center">Type:</label>
-                <div class="col-sm-8">
-                  <select class="custom-select" id="typeSelect">
-                    <option selected>...</option>
-                    <option value="1">Hydraulic</option>
-                    <option value="2">Electric</option>
-                    <option value="3">Electronics</option>
-                    <option value="3">Mechanical</option>
-                  </select>
-                </div>
-              </div>
-              <!-- Estimated Intervention Time row -->
-              <div class="form-group row">
-                <label for="activity-intTime" class="col-sm-4 col-form-label text-center">Intervention Time [min]:</label>
-                <div class="col-sm-8">
-                  <input type="number" class="form-control" id="activity-intTime" min="0" placeholder="Estimated Intervention Time in minutes" data-bind="value:replyNumber" />
-                </div>
-              </div>
-              <!-- Description of the activity row -->
-              <div class="form-group row">
-                <label for="activity-description" class="col-sm-4 col-form-label text-center">Actvity description:</label>
-                <div class="col-sm-8">
-                  <textarea class="form-control" id="activity-description" placeholder="Insert a short description of the activity."></textarea>
-                </div>
-              </div>
-              <!-- Interruptible activi radios row -->
-              <div class="form-group row">
-                <label for="activity-interruptible" class="col-sm-4 col-form-label text-center">Interruptible:</label>
-                <div class="col-sm-8" id="activvity-interruptible">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineInterruptibleRadioYes" value="Yes">
-                    <label class="form-check-label" for="inlineInterruptibleRadioYes">Yes</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineInterruptibleRadioNo" value="No" checked>
-                    <label class="form-check-label" for="inlineInterruptibleRadioNo">No</label>
+          <div class="modal-body ">
+            <form class="form form-horizontal striped-rows">
+
+              <div class="form-body justify-content-center">
+                <!-- Week row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-week" class="col-form-label col-sm-4 text-center">Week:</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="activity-week" min="1" max="53" placeholder="1 - 52" data-bind="value:replyNumber" />
                   </div>
                 </div>
-              </div>
-              <!-- Materials Row -->
-              <div class="form-group row">
-                <label for="activity-materials" class="col-sm-4 col-form-label text-center">Materials(optional):</label>
-                <div class="col-sm-8">
-                  <textarea class="form-control" id="activity-materials" placeholder="Materials to be used during the maintenance activity. (Optional)"></textarea>
+                <!-- Area row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-area" class="col-sm-4 col-form-label text-center">Area:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="activity-area">
+                  </div>
                 </div>
-              </div>
-              <!-- Workplace Notes row -->
-              <div class="form-group row">
-                <label for="activity-workNote" class="col-sm-4 col-form-label text-center">Workplace Notes(optional):</label>
-                <div class="col-sm-8">
-                  <textarea class="form-control" id="activity-workNote" placeholder="Insert any workplace notes. (Optional)"></textarea>
+                <!-- Type row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-type" class="col-sm-4 col-form-label text-center">Type:</label>
+                  <div class="col-sm-8">
+                    <select class="custom-select" id="typeSelect">
+                      <option selected>...</option>
+                      <option value="1">Hydraulic</option>
+                      <option value="2">Electric</option>
+                      <option value="3">Electronics</option>
+                      <option value="3">Mechanical</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Estimated Intervention Time row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-intTime" class="col-sm-4 col-form-label text-center">Intervention Time [min]:</label>
+                  <div class="col-sm-8 my-auto">
+                    <input type="number" class="form-control" id="activity-intTime" min="0" placeholder="Estimated Intervention Time in minutes" data-bind="value:replyNumber" />
+                  </div>
+                </div>
+                <!-- Description of the activity row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-description" class="col-sm-4 col-form-label text-center">Actvity description:</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" id="activity-description" placeholder="Insert a short description of the activity."></textarea>
+                  </div>
+                </div>
+                <!-- Interruptible activi radios row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-interruptible" class="col-sm-4 col-form-label text-center">Interruptible:</label>
+                  <div class="col-sm-8 my-auto" id="activvity-interruptible">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineInterruptibleRadioYes" value="Yes">
+                      <label class="form-check-label" for="inlineInterruptibleRadioYes">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineInterruptibleRadioNo" value="No" checked>
+                      <label class="form-check-label" for="inlineInterruptibleRadioNo">No</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Materials Row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-materials" class="col-sm-4 col-form-label text-center">Materials(optional):</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" id="activity-materials" placeholder="Materials to be used during the maintenance activity. (Optional)"></textarea>
+                  </div>
+                </div>
+                <!-- Workplace Notes row -->
+                <div class="form-group form-row py-2">
+                  <label for="activity-workNote" class="col-sm-4 col-form-label text-center my-auto">Workplace Notes(optional):</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" id="activity-workNote" placeholder="Insert any workplace notes. (Optional)"></textarea>
+                  </div>
+                </div>
+
+                </form>
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-blue text-light">Add Activity</button>
+                </div>
+                </div>
                 </div>
               </div>
 
-            </form>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-blue text-light">Add Activity</button>
-          </div>
-        </div>
-      </div>
     </div>
 
   </section>

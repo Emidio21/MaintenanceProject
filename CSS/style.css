@@ -37,3 +37,12 @@ h2{
 textarea {
   resize: none;
 }
+
+/* form customization */
+form.striped-rows .form-group:nth-child(even) {
+  background-color: rgba(0,0,0,.05);
+}
+
+.form-group{
+  margin-bottom: 0;
+}
