@@ -19,7 +19,7 @@ h2{
   background-color: #3274D6;
 }
 
-.btn-blue:hover, .bg-blue:hover{
+.btn-blue:hover{
   background-color: #2868c7;
 }
 
@@ -29,4 +29,11 @@ h2{
 
 .date{
   margin: 0 100px;
+}
+
+
+/* Textarea custom css */
+
+textarea {
+  resize: none;
 }
