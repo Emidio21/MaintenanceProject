@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Maintenance Planner</title>
 
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="CSS/style.css">
+<head>
+  <meta charset="utf-8">
+  <title>Maintenance Planner</title>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="CSS/style.css">
 
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/8ba51e2331.js" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/8ba51e2331.js" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    <!-- Header with logo, menu, date and week and user -->
-    <div class="container container-lg header sticky-top">
-      <nav class="navbar navbar-expand-md navbar-light bg-blue justify-content-center">
-        <a class="navbar-brand" href="#">
-          <img src="images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
-            CompanyX
-        </a>
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center"  id="collapsibleNavbar">
+</head>
+
+<body>
+  <!-- Header with logo, menu, date and week and user -->
+  <div class="container container-lg header sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-blue justify-content-center">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+        CompanyX
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
 
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -57,20 +59,20 @@
           <i class="fas fa-user-circle fa-4x"></i>
         </span>
       </div>
-      </nav>
+    </nav>
+
+  </div>
+
+
+  <!-- Body of the page where we find activities divided by weeks -->
+  <section class="activities-for-week">
+
+    <h2>Planned Activities by Weeks</h2>
+
+    <div class="accordion weeks container container-lg" id="accordionWeeks">
 
     </div>
-
-
-    <!-- Body of the page where we find activities divided by weeks -->
-    <section class="activities-for-week">
-
-      <h2>Planned Activities by Weeks</h2>
-
-      <div class="accordion weeks container container-lg" id="accordionWeeks">
-
-      </div>
-    </section>
+  </section>
 
   <section>
     <!-- Plan activity Modal -->
@@ -90,14 +92,14 @@
               <div class="form-body justify-content-center">
                 <!-- Week row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-week" class="col-form-label col-sm-4 text-center"><i class="far fa-calendar-minus fa-1px"></i>  Week:</label>
+                  <label for="activity-week" class="col-form-label col-sm-4 text-center"><i class="far fa-calendar-minus fa-1px"></i> Week:</label>
                   <div class="col-sm-8">
                     <input type="number" class="form-control" id="activity-week" min="1" max="53" placeholder="1 - 52" data-bind="value:replyNumber" />
                   </div>
                 </div>
                 <!-- Area row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-area" class="col-sm-4 col-form-label text-center"><i class="far fa-building fa-1px"></i>  Area:</label>
+                  <label for="activity-area" class="col-sm-4 col-form-label text-center"><i class="far fa-building fa-1px"></i> Area:</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" id="activity-area">
                   </div>
@@ -117,7 +119,7 @@
                 </div>
                 <!-- Estimated Intervention Time row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-intTime" class="col-sm-4 col-form-label text-center"><i class="far fa-clock fa-1px"></i>  Intervention Time [min]:</label>
+                  <label for="activity-intTime" class="col-sm-4 col-form-label text-center"><i class="far fa-clock fa-1px"></i> Intervention Time [min]:</label>
                   <div class="col-sm-8 my-auto">
                     <input type="number" class="form-control" id="activity-intTime" min="0" placeholder="Estimated Intervention Time in minutes" data-bind="value:replyNumber" />
                   </div>
@@ -131,7 +133,7 @@
                 </div>
                 <!-- Interruptible activi radios row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-interruptible" class="col-sm-4 col-form-label text-center"><i class="far fa-hand-paper fa-1px"></i>  Interruptible:</label>
+                  <label for="activity-interruptible" class="col-sm-4 col-form-label text-center"><i class="far fa-hand-paper fa-1px"></i> Interruptible:</label>
                   <div class="col-sm-8 my-auto" id="activvity-interruptible">
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineInterruptibleRadioYes" value="Yes">
@@ -145,48 +147,131 @@
                 </div>
                 <!-- Materials Row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-materials" class="col-sm-4 col-form-label text-center"><i class="fas fa-cogs fa-1px"></i>  Materials(optional):</label>
+                  <label for="activity-materials" class="col-sm-4 col-form-label text-center"><i class="fas fa-cogs fa-1px"></i> Materials(optional):</label>
                   <div class="col-sm-8">
                     <textarea class="form-control" id="activity-materials" placeholder="Materials to be used during the maintenance activity. (Optional)"></textarea>
                   </div>
                 </div>
                 <!-- Workplace Notes row -->
                 <div class="form-group form-row py-2">
-                  <label for="activity-workNote" class="col-sm-4 col-form-label text-center my-auto"><i class="far fa-sticky-note fa-1px"></i>  Workplace Notes(optional):</label>
+                  <label for="activity-workNote" class="col-sm-4 col-form-label text-center my-auto"><i class="far fa-sticky-note fa-1px"></i> Workplace Notes(optional):</label>
                   <div class="col-sm-8">
                     <textarea class="form-control" id="activity-workNote" placeholder="Insert any workplace notes. (Optional)"></textarea>
                   </div>
                 </div>
 
-                </form>
-                </div>
+            </form>
+          </div>
 
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-blue text-light">Add Activity</button>
-                </div>
-                </div>
-                </div>
-              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-blue text-light">Add Activity</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </div>
 
   </section>
 
-        <!-- Footer -->
-    <footer class="container container-lg footer font-small text-light bg-dark">
+  <!-- Selected activity Modal -->
+  <section>
+    <div class="modal fade" id="selectedModal" tabindex="-1" role="dialog" aria-labelledby="selectedModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-blue text-light">
+            <h5 class="modal-title" id="selectedModalLabel">Selected activity # </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body ">
+            <!-- Week and Activiti to assign row -->
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <div class="card text-center">
+                  <div class="card-header p-2">
+                    <h6 class="card-title mb-0" for="selected-activity-week">Week n°:</h6>
+                  </div>
+                  <div class="card-body p-2">
+                    <p class="card-text" id="selected-activity-week"></p>
+                  </div>
+                </div>
 
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://project-site.com/"> Team 6</a>
+
+              </div>
+              <div class="col-md-8">
+                <div class="card text-center">
+                  <div class="card-header p-2">
+                    <h6 class="card-title mb-0" for="selected-activity">Activity:</h6>
+                  </div>
+                  <div class="card-body p-2">
+                    <p class="card-text" id="selected-activity"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workspace note and Intervention description row -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="card text-center">
+                  <div class="card-header p-2">
+                    <h6 class="card-title mb-0" for="selected-activity-workNote">Workspace Notes:</h6>
+                  </div>
+                  <div class="card-body p-2">
+                    <p class="card-text" id="selected-activity-workNote"> The paint is closed from 00/00/00 to 00/00/00; On the remaining days, it's possible to intervene only after 15:00.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card text-center">
+                  <div class="card-header p-2">
+                    <h6 class="card-title mb-0" for="selected-activity-description">Intervention Description:</h6>
+                  </div>
+                  <div class="card-body p-2">
+                    <p class="card-text" id="selected-activity-description"> Replacement of robot 23 welding cable</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill needed row -->
+            <div class="">
+
+            </div>
+            <!-- File row -->
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-blue text-light">Forward</button>
+          </div>
+        </div>
       </div>
-      <!-- Copyright -->
+    </div>
 
-    </footer>
-    <!-- Footer -->
+    </div>
 
-    <!-- script javascript and jquery  -->
-    <script type="text/javascript" src='js/main.js'></script>
+  </section>
 
-  </body>
+  <!-- Footer -->
+  <footer class="container container-lg footer font-small text-light bg-dark">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://project-site.com/"> Team 6</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- script javascript and jquery  -->
+  <script type="text/javascript" src='js/main.js'></script>
+
+</body>
+
 </html>

@@ -166,6 +166,7 @@ function loadTable(){
           var week = dataJSON[i].week;
           $.each(dataJSON[i].activities, function(key, value){
               //console.log(value);
+              var activity = value.id + " - " + value.area + " - " + value.type+ " - " + value.intTime+ "'";
               var tableData = `
               <tr>
                 <td>` + value.id + `</td>
@@ -173,7 +174,7 @@ function loadTable(){
                 <td>` + value.type + `</td>
                 <td>` + value.intTime + `</td>
                 <td>
-                  <button id="` + value.id + `" type="button" class="btn btn-sm btn-block btn-outline-primary">Select</button>
+                  <button data-toggle="modal" data-target="#selectedModal" data-week="` + week + `" data-activity="` + activity + `" id="` + value.id + `" type="button" class="btn btn-sm btn-block btn-outline-primary">Select</button>
                 </td>
               </tr>
               `;
@@ -204,10 +205,24 @@ $("#accordionWeeks").on('hide.bs.collapse', function (event) {
 
 $('#planModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget); // Button that triggered the modal
-  var activiyWeek = button.data('week'); // Extract info from data-* attributes
+  var activityWeek = button.data('week'); // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
-  modal.find('.modal-title').text('Plan Activity for week ' +  activiyWeek);
-  modal.find('#activity-week').val(activiyWeek);
+  modal.find('.modal-title').text('Plan Activity for week ' +  activityWeek);
+  modal.find('#activity-week').val(activityWeek);
+});
+
+$('#selectedModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  console.log(button);
+  var activity = button.data('activity'); // Extract info from data-* attributes
+  var id = button.attr("id");
+  var week = button.data("week");
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('Selected activity # ' +  id);
+  modal.find('#selected-activity-week').text(week);
+  modal.find('#selected-activity').text(activity);
 });
