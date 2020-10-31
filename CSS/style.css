@@ -47,4 +47,7 @@ form.striped-rows .form-group:nth-child(even) {
   margin-bottom: 0;
 }
 
-/* Modal selectedModal custom CSS */
+/* list-group-item*/
+.list-group-item:nth-child(odd){
+  background-color: rgba(0,0,0,.05);
+}
