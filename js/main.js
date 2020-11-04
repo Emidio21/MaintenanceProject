@@ -206,8 +206,6 @@ $("#accordionWeeks").on('hide.bs.collapse', function (event) {
 $('#planModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget); // Button that triggered the modal
   var activityWeek = button.data('week'); // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text('Plan Activity for week ' +  activityWeek);
   modal.find('#activity-week').val(activityWeek);
@@ -219,8 +217,6 @@ $('#selectedModal').on('show.bs.modal', function (event) {
   var activity = button.data('activity'); // Extract info from data-* attributes
   var id = button.attr("id");
   var week = button.data("week");
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text('Selected activity # ' +  id);
   modal.find('#selected-activity-week').text(week);
