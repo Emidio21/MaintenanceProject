@@ -67,7 +67,7 @@ var dataJSON = [
   },
 
   {
-    "week" : 44,
+    "week" : 45,
     "activities" :
     [
       {
